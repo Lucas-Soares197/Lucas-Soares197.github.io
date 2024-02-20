@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*  font-family: "Roboto", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-family: "Montserrat", sans-serif;
+*/
+
+/* */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    box-sizing: content-box;
+}
+.body{
+    background-color: #1a1c1d ;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/*  Navbar  */
+header{
+    height:7vh;
+}
+
+
+.Navbar_Menu{
+    position: fixed;
+    background-color: #1f2223;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    z-index: 999;
+    padding: 20px;
+    max-height: 50px;
+}
+.Menu{
+    display: none;
+    align-items: center;
+}
+.NavName{
+    text-shadow: 3px 0 1px red;
+    line-height: 1rem;
+    align-items: center;
+    text-align: center;
+    font-size: 26px;
+}
+.NavName span{
+    font-size: 15px;
+    text-shadow: 4px 0 1px ;
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+    text-shadow: 4px 0 1px #1f2223;
+    letter-spacing: 5px;
+    font-style: italic;
+}
+.NavLinks > ul{
+    display: flex;
+}
+.NavLinks >ul >li > a{
+    font-weight: normal;
+    text-decoration: none;
+    color: white;
+    opacity: 70%;
+    font-size: 16px;
+    transition: 0.2s;
+    transition-duration: 0.2s;
+}
+.NavLinks > ul >li{
+    padding-left: 2rem;
+}
+
+.NavLinks > ul > li:hover{
+    transform: scale(1.04);
+    transition: 0.2s;
+    text-shadow: 0px 0px 1px white;
+}
+.NavLinks >ul >li > a:hover{
+    opacity: 100%;
+    transition: 0.2s;
+    background-color: #1a1c1d;
+}
+
+.Mobile_Menu{
+    visibility: hidden;
+}
+
+@media screen and (max-width: 1200px) {
+    .Navbar_Menu{
+        justify-content: space-between;
+    }
+    .Menu{
+        padding:20px 30px 0 0;
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        position: fixed;
+        height: 6vh;
+        top: 0;
+        right: 0;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+    }
+    .Menu:active{
+        background-color: #1a1c1d;
+
+    }
+    .NavName{
+        text-align: center;
+        margin: auto;
+        justify-content: center;
+        padding-bottom: 2px;        
+    }
+    .NavLinks{
+        display: none;
+    }
+    .Mobile_Menu{
+        overflow: hidden;
+        visibility: visible;  
+        position: absolute;
+        top: 64px;
+        width: 100%;
+        right: 0;
+        left: 0;
+        font-size: 18px;
+        background-color: #1a1c1d;
+        color: white;
+        height: calc(100vh - 77px);
+        display: none;
+        z-index: 1;
+    }
+.Mobile_Menu > ul >li{
+        text-align: center;
+        align-items: center;
+        margin: auto;
+        justify-content: center;
+        padding: 30px 0;        
+    }
+    .Mobile_Menu ul > li > a{
+        color: dimgray;
+    }
+    .Mobile_Menu ul > li > a:hover{
+        color: white;
+        transition: 0.2s;
+    }
+    @keyframes slideDown {
+        0% {
+            transform: translateY(-100%);
+        }
+        100% {
+            transform: translateY(0);
+        }
+}
+    @keyframes slideUp {
+         0% {
+        transform: translateY(0);
+    }
+        100% {
+        transform: translateY(-100%);
+    }
+}
+}
+
+/* Body da Página */
+.Bar{
+    text-align: center;
+    margin-top: 38px;
+    background-color: #1f2223;
+    padding: 20px;
+    font-size: 18px;
+}
+.Bar a{
+    color: #8498E0;
+    font-size: 19px;
+}
+.Bar a:hover{
+    text-decoration: underline;
+    
+}
+
+@media screen and (max-width: 1200px) {
+    .Bar > p{
+        font-size: 17px;
+        text-align: center;
+        margin: auto;
+    }
+}
+
+.Introduction_Main{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    text-align: center;
+    background-color: #232323;
+    border-radius: 20px;
+    padding: 30px  0;
+}
+.Introduction_Img > img{
+    width: 100%;
+    border-radius: 20px;
+}
+.Introduction_Img{
+    width: 30%;
+}
+
+.Introductio_Text{
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+}
+
+.Introductio_Text h2{
+    line-height: 3rem;
+    padding-top: 2rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: 40px;
+}
+
+.Introductio_Text p{
+    font-size: 20px;
+    padding-bottom: 2rem;
+    width: 90%;
+    text-align: left;
+    margin: auto;
+}
+
+button{
+    padding: 5px 20px;
+    font-size: 20px;
+    background-color: #005ab6;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+button > a{
+    color: white;
+}
+button:hover{
+    background-color:#0080ff ;
+}
+@media screen and (max-width: 1200px) {
+    .Introduction_Main{
+        display: block;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto;
+    }
+    .Introduction_Img{
+        width: 70%;
+        margin: auto;
+    }
+    .Introductio_Text{
+        justify-content: center;
+        width: 90%;
+        text-align: center;
+        margin: auto;
+    }
+    .Introductio_Text h2{
+        font-size: 19px;
+        line-height: 1.5rem;
+        width: 100%;
+    }
+    .Introductio_Text p {
+        font-size: 17px;
+        font-family: "Roboto", sans-serif;
+    }
+
+}
+
+/* Break da Pagina*/
+.Break_Pag{
+    background-image: url(../Assets/Tambi/iPhone\ 15\ break\ da\ página.jpeg);
+    text-align: center;
+    padding: 90px 0;
+    background-position: center ;
+    font-size: 30px;
+    color: #4680ba;
+    overflow: hidden;
+    border-radius: 20px;
+    width: 90%;
+    margin: auto;
+}
+@media screen and (max-width: 1200px) {
+    .Break_Pag{
+        background-repeat: no-repeat;
+    }
+
+    .Break_Pag h2{
+        font-size: 19px;
+        width: 90%;
+        text-align: center;
+        margin: auto;
+    }
+
+    .Celulares > h2{
+        font-size: 1px;
+    }
+
+    .Celulares > h3{
+        font-size:15px;
+    }
+
+    
+}
+
+    .Celulares{
+    text-align: center;
+    margin: 70px 0 0 0;
+}
+    .Celulares h2{
+    font-size: 40px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+    .Celulares h3{
+    text-shadow: 0 0 10px #d4a413;
+    color:#d4a413;
+    margin-bottom: 2rem;
+}
+
+/*   iPhone 15  */
+
+.Container_Pai{
+    padding: 90px 0 0 0 ;
+    display: flex;
+    justify-content: center;
+    background-color: #3e3f3f;
+}
+    .iPhone_15_ProMax{
+     width: 30%;
+}
+    .iPhone_15_ProMax > img{
+    width: 90%;
+}
+    .container{
+    width: 40%;
+}
+    .iphone-list{
+    margin: 20px 0 ;
+}
+
+    .iphone-feature h3{
+    font-size: 40px;
+    margin: 40px 0;    
+}
+
+    .iphone-feature >  p {
+    font-size: 20px;
+    margin: 20px 0 ;
+}
+    .sub-list{
+    margin: 20px 0;
+}
+    .sub-list li{
+    font-size: 20px;
+}
+    .container strong{
+    font-size: 30px;
+}
+@media screen and (max-width: 1200px) {
+    .Container_Pai{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        width: 90%;
+    }
+    .iphone-feature h3{
+        font-size: 35px;
+        margin: 20px 0;    
+        text-align: center;
+    }
+    .iphone-feature >  p {
+        font-size: 18px;
+    }
+    .desvender{
+        text-align: center;
+    }
+
+}
+.VariaçõesDeCelulares{
+    display: flex;
+    width: 25%;
+    margin: auto;
+    justify-content: center;
+}
+.VariaçõesDeCelulares img{
+    width: 100%;
+    margin: 50px 0 50px 0;
+    transition: 0.2s;
+}
+.VariaçõesDeCelulares img:hover{
+    transition: 0.8s;
+    transform: translateY(-20px);
+}
+
+
+
+
+
